@@ -14,7 +14,17 @@ const serviceImageOverrides={
   'مجلة أطفال مصورة':'./public/assets/service-magazine.jpg',
   'تحسين وترميم الصور':'./public/assets/service-restoration.jpg',
   'صورة شخصية بخلفية بيضاء':'./public/assets/service-studio-portrait.jpg',
-  'لوحة بورتريه شخصية':'./public/assets/service-art-portrait.jpg'
+  'لوحة بورتريه شخصية':'./public/assets/service-art-portrait.jpg',
+  'بورتريه بأسلوب قلم الرصاص':'./public/assets/service-pencil-portrait.jpg',
+  'بورتريه بالأقلام الملونة الخشب':'./public/assets/service-colored-portrait.jpg',
+  'بورتريه بأسلوب زيتي أو أكريليك':'./public/assets/service-oil-portrait.jpg',
+  'لوحة بيانات مولود':'./public/assets/service-baby-board.jpg',
+  'بوستر إعلاني للسوشيال ميديا':'./public/assets/service-social-poster.jpg',
+  'بوستر توعوي أو إنفوجرافيك':'./public/assets/service-awareness-poster.jpg',
+  'مطوية ثلاثية':'./public/assets/service-trifold.jpg',
+  'دفتر وصولات':'./public/assets/service-receipt.jpg',
+  'بروش دبوس بنز':'./public/assets/service-badge.jpg',
+  'بطاقة زفاف':'./public/assets/service-wedding.jpg'
 };
 const serviceImage=s=>serviceImageOverrides[s[1]]||imageMap[s[6]];
 const formatPrice = p => typeof p === 'number' ? `${p.toLocaleString('ar-IQ')} د.ع` : p;
