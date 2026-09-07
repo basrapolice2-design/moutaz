@@ -1,55 +1,204 @@
+const WHATSAPP = '9647706077321';
+
 const services = [
-  ['مدرسي','ملصقات مدرسية بصور شخصية','ثيمة لكل مادة مع الحفاظ على ملامح الوجه','A4',10,1000,'school'],['مدرسي','ملصقات مزخرفة بقص خاص','أشكال متنوعة مناسبة للقص بجهاز كاميو','A4',10,1000,'school'],['مدرسي','جدول الحصص المدرسية','جدول مخصص بالاسم والألوان والرسوم A3','A3',1,3000,'school'],['مدرسي','نشرة مدرسية','حسب الطلب: الموضوع والصف واللغة','A3',1,3000,'school'],['مدرسي','دفتر مذكرات شخصية','دفتر مقاس A5 مخطط','A5',20,1500,'school'],
-  ['هدايا','صور أطفال ورقية للمغامرات','لقطات مختلفة مع قصها','A4',10,1000,'kids'],['هدايا','مجلة أطفال مصورة','محتوى وصور وتخطيط؛ عدد الصفحات حسب الطلب','A4',16,10000,'kids'],['هدايا','لوحة بورتريه شخصية','رسم حسب الطلب: فحم أو ألوان أكريلك','A4',1,5000,'portrait'],['هدايا','تحويل صورة إلى أنمي ثلاثي الأبعاد','شخصية كرتونية مع الحفاظ على الهوية','A4',1,5000,'portrait'],['هدايا','دمج الشخصية في عالم خيالي','مشهد كرتوني أو مغامرة حسب الطلب','A4',1,5000,'kids'],['هدايا','بورتريه بأسلوب قلم الرصاص','خلفية بيضاء وتفاصيل الوجه وضربات القلم','A4',1,5000,'portrait'],['هدايا','بورتريه بالأقلام الملونة الخشب','ألوان واضحة وملمس رسم فني','A4',1,5000,'portrait'],['هدايا','بورتريه بأسلوب زيتي أو أكريليك','لوحة رقمية بملمس فرشاة','A4',1,5000,'portrait'],
-  ['عائلي','تحسين وترميم الصور','تحسين الإضاءة والألوان والوضوح','A3',1,10000,'restore'],['صور','صورة شخصية بخلفية بيضاء','بورتريه استوديو مع تعديل الإضاءة والزي','A6',8,3000,'portrait'],['أطفال','لوحة بيانات مولود','صورة واسم وتاريخ ووزن وطول','A4',1,5000,'kids'],['تجاري','بوستر إعلاني للسوشيال ميديا','تصميم مخصص للنشر على المنصات','A4',10,5000,'business'],['مدرسي','بوستر توعوي أو إنفوجرافيك','تنظيم المحتوى مع صور أو رموز','A3',1,3000,'school'],['تجاري','مطوية ثلاثية','وجهان وستة أعمدة','A4',50,5000,'business'],['تجاري','دفتر وصولات','دفتر وصولات ملون عادي أو مكربن، 100 ورقة','A5',10,25000,'business'],['مدرسي','بروش دبوس بنز','صورة أو كتابة','4 S',1,1500,'school'],['عائلي','بطاقة زفاف','دعوة وطباعة ملونة','A6',50,10000,'kids'],['مدرسي','شهادة التخرج','صورة مجومة مع الدرجات','A4',1,5000,'school'],['مدرسي','شهادة درجات','كارت شهادة بتصميم خاص للمدرسية','A4',100,40000,'school'],['تجاري','بطاقة مخبز','كارتات كبس عظم','A7',100,15000,'business'],['هدايا','طباعة أسماء','قص فينيل حراري وتثبيته بالمكواة العادية','A6',1,3000,'kids'],['تجاري','كرت شخصي','تصميم وطباعة حسب الطلب','A7',100,5000,'business'],['تجاري','لوحات مكتبية','لوحات الأسماء التعريفية','A7',1,5000,'business'],['تجاري','بطاقة التموين','طباعة بطاقة التموين عاج','A7',1,5000,'business'],['مؤسسات','درع كرستال','تصميم وطباعة دروع الكرستال','A5',1,15000,'business'],['مؤسسات','مجلة','إنتاج المحتوى والتصميم والطباعة','A4',40,'يحدد حسب العمل','business'],['مدارس','شهادة تقديرية','تصميم وطباعة شهادات التقدير','A4',1,500,'school'],['مؤسسات','تصميم لوكو','تصميم لوكو خاص بمؤسستك','A4',1,25000,'business'],['مدارس','الرؤية والأهداف','تصميم وطباعة على بورد خشب','A3',1,10000,'business'],['هدايا','تقويم','تقويم بصورة شخصية أو لوكو المؤسسة','A3',1,3000,'kids'],['مؤسسات','سجل','سجل مخطط ومطبوع حسب الطلب','A4',1,5000,'business'],['مؤسسات','فايل','فايل تسجيل للمدارس حسب الطلب','A3',50,30000,'school']
+  {category:'مدرسي',name:'ملصقات مدرسية بصور شخصية',desc:'صورة شخصية بزي وثيمة خاصة لكل مادة',size:'A4',qty:10,price:1000,image:'./public/assets/service-school-stickers.jpg',segments:['students'],featured:true,badge:'الأكثر طلبًا'},
+  {category:'مدرسي',name:'ملصقات مزخرفة بقص خاص',desc:'أشكال متنوعة مناسبة للقص بجهاز كاميو',size:'A4',qty:10,price:1000,image:'./public/assets/service-cut-stickers.jpg',segments:['students'],badge:'للمدارس'},
+  {category:'مدرسي',name:'جدول الحصص المدرسية',desc:'جدول مخصص بالاسم والصورة الشخصية والألوان والرسوم',size:'A3',qty:1,price:3000,image:'./public/assets/service-schedule.jpg',segments:['students'],featured:true,badge:'الأكثر طلبًا'},
+  {category:'مدرسي',name:'نشرة مدرسية',desc:'شرح وخارطة ذهنية لأي مادة وأي مرحلة دراسية',size:'A3',qty:1,price:3000,image:'./public/assets/service-newsletter.jpg',segments:['teachers','students'],badge:'للمعلمين'},
+  {category:'مدرسي',name:'دفتر مذكرات شخصية',desc:'دفتر مذكرات بالصورة الشخصية والاسم',size:'A5',qty:20,price:1500,image:'./public/assets/service-notebook.jpg',segments:['students'],featured:true,badge:'الأكثر طلبًا'},
+  {category:'هدايا',name:'صور أطفال ورقية للمغامرات',desc:'تصميم لعبة ورق بصور شخصية غامرة بالخيال',size:'A4',qty:10,price:1000,image:'./public/assets/service-adventures.jpg',segments:['gifts'],badge:'هدية شخصية'},
+  {category:'هدايا',name:'مجلة أطفال مصورة',desc:'محتوى وصور وتخطيط؛ عدد الصفحات حسب الطلب',size:'A4',qty:16,price:10000,image:'./public/assets/service-magazine.jpg',segments:['gifts'],badge:'مناسبات'},
+  {category:'عائلي',name:'تحسين وترميم الصور',desc:'تحسين الإضاءة والألوان والوضوح',size:'A3',qty:1,price:10000,image:'./public/assets/service-restoration.jpg',segments:['photos','gifts'],featured:true,badge:'قبل / بعد'},
+  {category:'صور',name:'صورة شخصية بخلفية بيضاء',desc:'بورتريه استوديو مع تعديل الإضاءة والزي',size:'A6',qty:8,price:3000,image:'./public/assets/service-studio-portrait.jpg',segments:['photos'],badge:'استوديو'},
+  {category:'هدايا',name:'لوحة بورتريه شخصية',desc:'رسم حسب الطلب: فحم أو ألوان أو أكريليك',size:'A4',qty:1,price:5000,image:'./public/assets/service-art-portrait.jpg',segments:['photos','gifts'],featured:true,badge:'هدية شخصية'},
+  {category:'هدايا',name:'تحويل صورة إلى أنمي ثلاثي الأبعاد',desc:'تحويل صورة طفلك إلى شخصية غامرة بالخيال لأجمل الذكريات',size:'A4',qty:1,price:5000,image:'./public/assets/service-anime-3d.jpg',segments:['photos','gifts'],badge:'3D'},
+  {category:'هدايا',name:'دمج الشخصية في عالم خيالي',desc:'تصميم لوحة مغامرة من عالم الخيال مع باركود لتشغيل فيديو',size:'A4',qty:1,price:5000,image:'./public/assets/service-fantasy-world.jpg',segments:['photos','gifts'],badge:'مغامرة'},
+  {category:'هدايا',name:'بورتريه بأسلوب قلم الرصاص',desc:'لوحة مرسومة بالفحم وأقلام الرصاص على ورق سكتش',size:'A4',qty:1,price:5000,image:'./public/assets/service-pencil-portrait.jpg',segments:['photos','gifts'],badge:'بورتريه'},
+  {category:'هدايا',name:'بورتريه بأسلوب الأقلام الملونة الخشب',desc:'رسم بورتريه بأقلام الخشب الملونة',size:'A4',qty:1,price:5000,image:'./public/assets/service-colored-portrait.jpg',segments:['photos','gifts'],badge:'بورتريه'},
+  {category:'هدايا',name:'بورتريه بأسلوب زيتي أو أكريليك',desc:'لوحة رقمية بملمس فرشاة وألوان أكريليك',size:'A4',qty:1,price:5000,image:'./public/assets/service-oil-portrait.jpg',segments:['photos','gifts'],badge:'بورتريه'},
+  {category:'أطفال',name:'لوحة بيانات مولود',desc:'صورة واسم وتاريخ ووزن وطول الطفل لتخليد ذكرى جميلة',size:'A4',qty:1,price:5000,image:'./public/assets/service-baby-board.jpg',segments:['gifts'],badge:'مواليد'},
+  {category:'تجاري',name:'بوستر إعلاني للسوشيال ميديا',desc:'تصميم مخصص للنشر على المنصات',size:'A4',qty:10,price:5000,image:'./public/assets/service-social-poster.jpg',segments:['business'],featured:true,badge:'للأعمال'},
+  {category:'تجاري',name:'مطوية ثلاثية',desc:'وجهان وستة أعمدة',size:'A4',qty:50,price:5000,image:'./public/assets/service-trifold.jpg',segments:['business','institutions'],badge:'للأعمال'},
+  {category:'تجاري',name:'دفتر وصولات',desc:'دفتر وصولات ملون عادي أو مكربن، 100 ورقة',size:'A5',qty:10,price:25000,image:'./public/assets/service-receipt.jpg',segments:['business','institutions'],badge:'للأعمال'},
+  {category:'مدرسي',name:'بروش دبوس بنز',desc:'صورة شخصية أو لوكو',size:'4 S',qty:1,price:1500,image:'./public/assets/service-badge.jpg',segments:['students','gifts','institutions'],badge:'تخصيص'},
+  {category:'عائلي',name:'بطاقة زفاف',desc:'بطاقات دعوة زفاف أو مناسبة بطباعة ملونة',size:'A6',qty:50,price:10000,image:'./public/assets/service-wedding.jpg',segments:['gifts'],badge:'مناسبات'},
+  {category:'مدرسي',name:'شهادة التخرج',desc:'صورة شخصية على بورد أو إطار مع الدرجات',size:'A4',qty:1,price:5000,image:'./public/assets/service-graduation.jpg',segments:['students','gifts'],badge:'تخرج'},
+  {category:'مدرسي',name:'شهادة درجات',desc:'كارت شهادة بتصميم خاص للمدرسة',size:'A4',qty:100,price:40000,image:'./public/assets/service-grades.jpg',segments:['students','institutions'],badge:'للمدارس'},
+  {category:'تجاري',name:'بطاقة مخبز',desc:'كارتات كبس عظم',size:'A7',qty:100,price:15000,image:'./public/assets/service-bakery-card.jpg',segments:['business'],badge:'للأعمال'},
+  {category:'هدايا',name:'طباعة أسماء',desc:'قص فينيل حراري وتثبيته بواسطة المكواة العادية',size:'A6',qty:1,price:3000,image:'./public/assets/service-name-print.jpg',segments:['gifts'],badge:'تخصيص'},
+  {category:'تجاري',name:'كرت شخصي',desc:'تصميم وطباعة حسب الطلب',size:'A7',qty:100,price:5000,image:'./public/assets/service-business-card.jpg',segments:['business'],badge:'للأعمال'},
+  {category:'تجاري',name:'لوحات مكتبية',desc:'لوحات الأسماء التعريفية',size:'A7',qty:1,price:5000,image:'./public/assets/service-office-sign.jpg',segments:['business','institutions'],badge:'مؤسسات'},
+  {category:'تجاري',name:'بطاقة التموين',desc:'طباعة بطاقة التموين عاج أو أي مستمسكات أخرى',size:'A7',qty:1,price:5000,image:'./public/assets/service-ration-card.jpg',segments:['business'],badge:'طباعة'},
+  {category:'مؤسسات',name:'درع كرستال',desc:'تصميم وطباعة دروع الكرستال',size:'A5',qty:1,price:15000,image:'./public/assets/service-crystal-shield.jpg',segments:['institutions','gifts'],badge:'مؤسسات'},
+  {category:'مؤسسات',name:'مجلة',desc:'إنتاج المحتوى والتصميم والطباعة',size:'A4',qty:40,price:'يحدد حسب العمل',image:'./public/assets/service-institution-magazine.jpg',segments:['institutions'],quoteOnly:true,badge:'عرض سعر'},
+  {category:'مدارس',name:'شهادة تقديرية',desc:'تصميم وطباعة شهادات التقدير',size:'A4',qty:1,price:500,image:'./public/assets/service-appreciation-certificate.jpg',segments:['teachers','institutions'],badge:'للمدارس'},
+  {category:'مؤسسات',name:'تصميم لوكو',desc:'تصميم لوكو خاص بمؤسستك مع هوية بصرية متكاملة',size:'A4',qty:1,price:25000,image:'./public/assets/service-logo-design.jpg',segments:['business','institutions'],featured:true,badge:'للأعمال'},
+  {category:'مدارس',name:'الرؤية والأهداف',desc:'تصميم وطباعة على بورد خشب',size:'A3',qty:1,price:10000,image:'./public/assets/service-vision-board.jpg',segments:['institutions'],badge:'للمدارس'},
+  {category:'هدايا',name:'تقويم',desc:'تقويم بصورة شخصية أو لوكو المؤسسة',size:'A3',qty:1,price:3000,image:'./public/assets/service-calendar.jpg',segments:['gifts','institutions'],badge:'تخصيص'},
+  {category:'مؤسسات',name:'سجل',desc:'سجل مخطط ومطبوع حسب الطلب',size:'A4',qty:1,price:5000,image:'./public/assets/service-register.jpg',segments:['teachers','institutions'],badge:'مؤسسات'},
+  {category:'مؤسسات',name:'فايل',desc:'فايل تسجيل للمدارس والمؤسسات حسب الطلب',size:'A3',qty:50,price:30000,image:'./public/assets/service-school-folder.jpg',segments:['institutions'],featured:true,badge:'طلبات بالجملة'},
+  {category:'مؤسسات',name:'تنظيم إداريات',desc:'مجموعة السجلات المطلوبة في عمل منظمات المجتمع المدني',size:'A4',qty:100,price:'حسب الكمية',image:'./public/assets/service-register.jpg',segments:['institutions'],quoteOnly:true,badge:'عرض سعر'},
+  {category:'تجاري',name:'فينيل أسطح',desc:'تصميم وقص عبارات ولوكوهات فينيل الأسطح',size:'حسب الطلب',qty:null,price:'حسب الحجم',image:'./public/assets/business-print.jpg',segments:['business','institutions'],quoteOnly:true,badge:'حسب المقاس'}
 ];
-const imageMap={school:'./public/assets/school-stickers.jpg',kids:'./public/assets/kids-gifts.jpg',portrait:'./public/assets/portraits.jpg',restore:'./public/assets/photo-restoration.jpg',business:'./public/assets/business-print.jpg'};
-const serviceImageOverrides={
-  'ملصقات مدرسية بصور شخصية':'./public/assets/service-school-stickers.jpg',
-  'ملصقات مزخرفة بقص خاص':'./public/assets/service-cut-stickers.jpg',
-  'جدول الحصص المدرسية':'./public/assets/service-schedule.jpg',
-  'نشرة مدرسية':'./public/assets/service-newsletter.jpg',
-  'دفتر مذكرات شخصية':'./public/assets/service-notebook.jpg',
-  'صور أطفال ورقية للمغامرات':'./public/assets/service-adventures.jpg',
-  'تحويل صورة إلى أنمي ثلاثي الأبعاد':'./public/assets/service-anime-3d.jpg',
-  'دمج الشخصية في عالم خيالي':'./public/assets/service-fantasy-world.jpg',
-  'مجلة أطفال مصورة':'./public/assets/service-magazine.jpg',
-  'تحسين وترميم الصور':'./public/assets/service-restoration.jpg',
-  'صورة شخصية بخلفية بيضاء':'./public/assets/service-studio-portrait.jpg',
-  'لوحة بورتريه شخصية':'./public/assets/service-art-portrait.jpg',
-  'بورتريه بأسلوب قلم الرصاص':'./public/assets/service-pencil-portrait.jpg',
-  'بورتريه بالأقلام الملونة الخشب':'./public/assets/service-colored-portrait.jpg',
-  'بورتريه بأسلوب زيتي أو أكريليك':'./public/assets/service-oil-portrait.jpg',
-  'لوحة بيانات مولود':'./public/assets/service-baby-board.jpg',
-  'بوستر إعلاني للسوشيال ميديا':'./public/assets/service-social-poster.jpg',
-  'بوستر توعوي أو إنفوجرافيك':'./public/assets/service-awareness-poster.jpg',
-  'مطوية ثلاثية':'./public/assets/service-trifold.jpg',
-  'دفتر وصولات':'./public/assets/service-receipt.jpg',
-  'بروش دبوس بنز':'./public/assets/service-badge.jpg',
-  'بطاقة زفاف':'./public/assets/service-wedding.jpg',
-  'شهادة التخرج':'./public/assets/service-graduation.jpg',
-  'شهادة درجات':'./public/assets/service-grades.jpg',
-  'بطاقة مخبز':'./public/assets/service-bakery-card.jpg',
-  'طباعة أسماء':'./public/assets/service-name-print.jpg',
-  'كرت شخصي':'./public/assets/service-business-card.jpg',
-  'لوحات مكتبية':'./public/assets/service-office-sign.jpg',
-  'بطاقة التموين':'./public/assets/service-ration-card.jpg',
-  'درع كرستال':'./public/assets/service-crystal-shield.jpg',
-  'مجلة':'./public/assets/service-institution-magazine.jpg',
-  'شهادة تقديرية':'./public/assets/service-appreciation-certificate.jpg',
-  'تصميم لوكو':'./public/assets/service-logo-design.jpg',
-  'الرؤية والأهداف':'./public/assets/service-vision-board.jpg',
-  'تقويم':'./public/assets/service-calendar.jpg',
-  'سجل':'./public/assets/service-register.jpg',
-  'فايل':'./public/assets/service-school-folder.jpg'
-};
-const serviceImage=s=>serviceImageOverrides[s[1]]||imageMap[s[6]];
-const formatPrice = p => typeof p === 'number' ? `${p.toLocaleString('ar-IQ')} د.ع` : p;
-const grid=document.querySelector('#serviceGrid'), resultCount=document.querySelector('#resultCount'), empty=document.querySelector('#emptyState');
-let currentCategory='الكل';
-function getFiltered(){const q=document.querySelector('#search').value.trim().toLowerCase();return services.filter(s=>(currentCategory==='الكل'||s[0].trim()===currentCategory)&&(!q||s[1].toLowerCase().includes(q)||s[2].toLowerCase().includes(q)));}
-function render(){const list=getFiltered();resultCount.textContent=`${list.length} خدمة متاحة`;empty.hidden=list.length!==0;grid.innerHTML=list.map((s,i)=>`<article class="service-card" style="animation-delay:${Math.min(i*25,300)}ms"><div class="service-image"><img src="${serviceImage(s)}" alt="${s[1]}" loading="lazy"></div><div class="service-content"><span class="service-category">${s[0]}</span><h3>${s[1]}</h3><p>${s[2]}</p><div class="card-bottom"><span class="price">${formatPrice(s[5])} <small>/ ${s[3]}</small></span><button class="request-btn" data-index="${services.indexOf(s)}">اطلب الآن</button></div></div></article>`).join('');document.querySelectorAll('.request-btn').forEach(b=>b.addEventListener('click',()=>openModal(services[Number(b.dataset.index)])));}
-function openModal(s){document.querySelector('#modalImage').src=serviceImage(s);document.querySelector('#modalImage').alt=s[1];document.querySelector('#modalCategory').textContent=s[0];document.querySelector('#modalTitle').textContent=s[1];document.querySelector('#modalDesc').textContent=s[2];document.querySelector('#modalPrice').textContent=formatPrice(s[5]);document.querySelector('#modalSpec').textContent=`المقاس: ${s[3]} · العدد: ${s[4]}`;document.querySelector('#modalWhatsapp').href=`https://wa.me/9647706077321?text=${encodeURIComponent(`مرحباً، أريد طلب خدمة: ${s[1]}\nالسعر الظاهر: ${formatPrice(s[5])}\nالمقاس: ${s[3]}\nالعدد: ${s[4]}`)}`;document.querySelector('#modal').classList.add('open');document.querySelector('#modal').setAttribute('aria-hidden','false');}
-document.querySelector('#search').addEventListener('input',render);document.querySelectorAll('.category').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.category').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentCategory=btn.dataset.category;render();}));
-document.querySelector('.modal-close').addEventListener('click',()=>document.querySelector('#modal').classList.remove('open'));document.querySelector('#modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelector('#modal').classList.remove('open')});document.querySelector('.menu-toggle').addEventListener('click',()=>document.querySelector('.main-nav').classList.toggle('show'));
-render();
+
+const paths = [
+  {id:'students',icon:'fa-book-open',title:'الطلاب والمدرسة',desc:'ملصقات، جداول، دفاتر، تخرج وشهادات',cta:'تصفح منتجات المدرسة'},
+  {id:'teachers',icon:'fa-chalkboard-user',title:'المعلمون',desc:'نشرات، شهادات، سجلات ووسائل مدرسية',cta:'اعرض خدمات المعلمين'},
+  {id:'photos',icon:'fa-camera-retro',title:'الصور والبورتريه',desc:'ترميم، استوديو، رصاص، ألوان و3D',cta:'أرسل صورتك'},
+  {id:'gifts',icon:'fa-gift',title:'الهدايا والمناسبات',desc:'تقويم، دعوات، مجلات، لوحات وتخصيص',cta:'اصنع هدية شخصية'},
+  {id:'business',icon:'fa-briefcase',title:'المشاريع والأعمال',desc:'لوكو، كروت، بوسترات، مطويات ومطبوعات',cta:'ابدأ هوية مشروعك'},
+  {id:'institutions',icon:'fa-building-columns',title:'المدارس والمؤسسات',desc:'دروع، مجلات، فايلات، سجلات وشهادات',cta:'اطلب عرض سعر'}
+];
+
+const packages = [
+  {name:'Student Pack',ar:'باقة الطالب',icon:'fa-graduation-cap',items:['ملصقات مدرسية','دفتر مذكرات','جدول حصص'],audience:'الطلاب والأسر',goal:'مجموعة مدرسية متناسقة بدل شراء كل قطعة منفردة.'},
+  {name:'Teacher Pack',ar:'باقة المعلم',icon:'fa-person-chalkboard',items:['نشرة / إنفوجرافيك','بوستر تعليمي','غلاف ورقة عمل'],audience:'المعلمون',goal:'تحويل موضوع الدرس إلى مجموعة بصرية جاهزة.'},
+  {name:'Portrait Pack',ar:'باقة الصور',icon:'fa-image-portrait',items:['ترميم صورة','صورة استوديو','بورتريه فني'],audience:'الأفراد والهدايا',goal:'أكثر من معالجة فنية لنفس الصورة أو المناسبة.'},
+  {name:'Small Business Starter',ar:'باقة المشروع',icon:'fa-store',items:['تصميم لوكو','كرت شخصي','5 منشورات سوشيال'],audience:'المشاريع الصغيرة',goal:'بداية هوية وتسويق بصري موحد للمشروع.'},
+  {name:'School Admin Pack',ar:'باقة إدارة المدرسة',icon:'fa-school',items:['شهادات','فايل','سجل','لوحة رؤية وأهداف'],audience:'المدارس',goal:'مجموعة مطبوعات إدارية موحدة للمدرسة.'}
+];
+
+const showcases = [
+  {name:'تحسين وترميم الصور',eyebrow:'Transformation',text:'خدمة مرئية مثالية لعرض التحول من الصورة القديمة إلى نسخة محسنة.',image:'./public/assets/service-restoration.jpg'},
+  {name:'ملصقات مدرسية بصور شخصية',eyebrow:'School Season',text:'منتج سريع الفهم بصريًا ومناسب للموسم الدراسي والباقات.',image:'./public/assets/service-school-stickers.jpg'},
+  {name:'تصميم لوكو',eyebrow:'Business Identity',text:'بوابة واضحة من تصميم شعار واحد إلى هوية ومطبوعات متكاملة.',image:'./public/assets/service-logo-design.jpg'}
+];
+
+const state = {segment:'all',query:''};
+let activeService = null;
+const $ = (sel,scope=document) => scope.querySelector(sel);
+const $$ = (sel,scope=document) => [...scope.querySelectorAll(sel)];
+const money = value => typeof value === 'number' ? `${value.toLocaleString('ar-IQ')} د.ع` : value;
+const qtyLabel = qty => qty === null || qty === undefined || qty === '' ? 'حسب الطلب' : qty.toLocaleString('ar-IQ');
+const waUrl = text => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+const segmentTitle = id => paths.find(p=>p.id===id)?.title || 'خدمة مخصصة';
+
+function serviceMessage(s){
+  const price = money(s.price);
+  return `مرحباً، أريد طلب خدمة: ${s.name}\nالسعر الظاهر: ${price}\nالمقاس: ${s.size}\nالعدد: ${qtyLabel(s.qty)}\nأرغب بإرسال الصورة/الفكرة والتفاصيل الآن.`;
+}
+function packageMessage(p){return `مرحباً، أنا مهتم بـ ${p.ar} (${p.name}). أرجو إرسال التفاصيل والسعر النهائي حسب طلبي.`;}
+function serviceByName(name){return services.find(s=>s.name===name);}
+
+function renderPaths(){
+  $('#pathGrid').innerHTML = paths.map(p=>`<article class="path-card reveal" data-segment="${p.id}" tabindex="0"><span class="path-icon"><i class="fa-solid ${p.icon}" aria-hidden="true"></i></span><h3>${p.title}</h3><p>${p.desc}</p><button type="button">${p.cta}<i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button></article>`).join('');
+  $$('.path-card').forEach(card=>{
+    const activate=()=>{setSegment(card.dataset.segment);$('#services').scrollIntoView({behavior:reducedMotion()?'auto':'smooth'});};
+    card.addEventListener('click',activate);
+    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+  });
+}
+
+function renderBest(){
+  const featured = services.filter(s=>s.featured).slice(0,8);
+  $('#bestGrid').innerHTML = featured.map((s,i)=>serviceCard(s,i,'best-card')).join('');
+  bindServiceCards($('#bestGrid'));
+}
+
+function renderShowcase(){
+  $('#showcaseGrid').innerHTML = showcases.map((item,i)=>`<article class="showcase-card reveal"><img src="${item.image}" alt="${item.name}" width="700" height="520" loading="lazy"><div class="showcase-overlay"><span>${item.eyebrow}</span><h3>${item.name}</h3><p>${item.text}</p><button class="showcase-order" type="button" data-name="${item.name}">اطلب هذه الخدمة <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button></div><span class="showcase-index">0${i+1}</span></article>`).join('');
+  $$('.showcase-order').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const s=serviceByName(btn.dataset.name);if(s)openModal(s);}));
+}
+
+function renderPackages(){
+  $('#packageGrid').innerHTML=packages.map((p,i)=>`<article class="package-card reveal"><div class="package-top"><span class="package-icon"><i class="fa-solid ${p.icon}" aria-hidden="true"></i></span><span class="package-number">0${i+1}</span></div><p class="package-en">${p.name}</p><h3>${p.ar}</h3><ul>${p.items.map(x=>`<li><i class="fa-solid fa-check" aria-hidden="true"></i>${x}</li>`).join('')}</ul><div class="package-meta"><span>${p.audience}</span><p>${p.goal}</p></div><a class="package-wa" href="${waUrl(packageMessage(p))}" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> اطلب تفاصيل الباقة</a></article>`).join('');
+}
+
+function renderFilters(){
+  const chips=[{id:'all',title:'كل الخدمات'},...paths.map(({id,title})=>({id,title}))];
+  $('#filterChips').innerHTML=chips.map(c=>`<button type="button" class="filter-chip ${state.segment===c.id?'active':''}" data-segment="${c.id}">${c.title}</button>`).join('');
+  $$('.filter-chip').forEach(btn=>btn.addEventListener('click',()=>setSegment(btn.dataset.segment)));
+}
+
+function setSegment(segment){
+  state.segment=segment;
+  renderFilters();
+  renderServices();
+}
+
+function filteredServices(){
+  const q=state.query.trim().toLowerCase();
+  return services.filter(s=>{
+    const segmentOk=state.segment==='all'||s.segments.includes(state.segment);
+    const text=`${s.name} ${s.desc} ${s.category} ${s.size}`.toLowerCase();
+    return segmentOk && (!q || text.includes(q));
+  });
+}
+
+function serviceCard(s,i,extra=''){
+  const priceClass=s.quoteOnly?'quote':'fixed';
+  return `<article class="service-card ${extra} reveal" data-name="${s.name}" tabindex="0" style="--delay:${Math.min(i*28,280)}ms"><div class="service-media"><img src="${s.image}" alt="${s.name}" width="640" height="480" loading="lazy"><span class="service-badge">${s.badge||s.category}</span></div><div class="service-body"><div class="service-meta"><span>${segmentTitle(s.segments[0])}</span><span>${s.size}</span></div><h3>${s.name}</h3><p>${s.desc}</p><div class="service-footer"><div class="service-price ${priceClass}"><small>${s.quoteOnly?'التسعير':'السعر المدرج'}</small><strong>${money(s.price)}</strong><span>العدد: ${qtyLabel(s.qty)}</span></div><a class="quick-wa" href="${waUrl(serviceMessage(s))}" target="_blank" rel="noreferrer" aria-label="طلب ${s.name} عبر واتساب"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></div></div></article>`;
+}
+
+function bindServiceCards(scope){
+  $$('.service-card',scope).forEach(card=>{
+    const open=()=>{const s=serviceByName(card.dataset.name);if(s)openModal(s);};
+    card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;open();});
+    card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a,button')){e.preventDefault();open();}});
+  });
+}
+
+function renderServices(){
+  const list=filteredServices();
+  $('#resultCount').textContent=`${list.length.toLocaleString('ar-IQ')} من ${services.length.toLocaleString('ar-IQ')} خدمة`;
+  $('#emptyState').hidden=list.length>0;
+  $('#serviceGrid').innerHTML=list.map((s,i)=>serviceCard(s,i)).join('');
+  bindServiceCards($('#serviceGrid'));
+}
+
+function openModal(s){
+  activeService=s;
+  $('#modalImage').src=s.image;
+  $('#modalImage').alt=s.name;
+  $('#modalSegment').textContent=segmentTitle(s.segments[0]);
+  $('#modalBadge').textContent=s.badge||s.category;
+  $('#modalTitle').textContent=s.name;
+  $('#modalDesc').textContent=s.desc;
+  $('#modalSize').textContent=s.size;
+  $('#modalQty').textContent=qtyLabel(s.qty);
+  $('#modalPrice').textContent=money(s.price);
+  $('#modalWhatsapp').href=waUrl(serviceMessage(s));
+  const modal=$('#modal');modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+  document.body.classList.add('modal-open');
+  $('.modal-close').focus();
+}
+function closeModal(){const modal=$('#modal');modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');activeService=null;}
+
+async function shareActiveService(){
+  if(!activeService)return;
+  const text=`${activeService.name} — ${money(activeService.price)} | MOUTAZ GROUP`;
+  const url=location.href.split('#')[0]+'#services';
+  try{
+    if(navigator.share){await navigator.share({title:activeService.name,text,url});}
+    else if(navigator.clipboard){await navigator.clipboard.writeText(`${text}\n${url}`);showToast('تم نسخ تفاصيل الخدمة والرابط');}
+    else{showToast('المشاركة غير متاحة في هذا المتصفح');}
+  }catch(err){if(err?.name!=='AbortError')showToast('تعذر فتح المشاركة');}
+}
+
+function showToast(message){const toast=$('#toast');toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),2200);}
+function reducedMotion(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
+function initReveal(){if(reducedMotion())return;const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}}),{threshold:.08});$$('.reveal').forEach(el=>io.observe(el));}
+
+function initNav(){
+  const btn=$('.menu-toggle'),nav=$('#mainNav');
+  btn.addEventListener('click',()=>{const open=nav.classList.toggle('show');btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'إغلاق القائمة':'فتح القائمة');btn.innerHTML=`<i class="fa-solid ${open?'fa-xmark':'fa-bars'}" aria-hidden="true"></i>`;});
+  $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('show');btn.setAttribute('aria-expanded','false');}));
+}
+
+function initEvents(){
+  $('#search').addEventListener('input',e=>{state.query=e.target.value;renderServices();});
+  $('.modal-close').addEventListener('click',closeModal);
+  $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#modal').classList.contains('open'))closeModal();});
+  $('#shareService').addEventListener('click',shareActiveService);
+  $('#backToTop').addEventListener('click',()=>scrollTo({top:0,behavior:reducedMotion()?'auto':'smooth'}));
+  addEventListener('scroll',()=>$('#backToTop').classList.toggle('show',scrollY>700),{passive:true});
+}
+
+function init(){
+  renderPaths();renderBest();renderShowcase();renderPackages();renderFilters();renderServices();
+  initNav();initEvents();initReveal();
+  $('#year').textContent=new Date().getFullYear();
+  console.info(`MOUTAZ GROUP: ${services.length} services loaded`);
+}
+init();
