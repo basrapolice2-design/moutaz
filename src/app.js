@@ -11,6 +11,8 @@ const serviceImageOverrides={
   'نشرة مدرسية':'./public/assets/service-newsletter.jpg',
   'دفتر مذكرات شخصية':'./public/assets/service-notebook.jpg',
   'صور أطفال ورقية للمغامرات':'./public/assets/service-adventures.jpg',
+  'تحويل صورة إلى أنمي ثلاثي الأبعاد':'./public/assets/service-anime-3d.jpg',
+  'دمج الشخصية في عالم خيالي':'./public/assets/service-fantasy-world.jpg',
   'مجلة أطفال مصورة':'./public/assets/service-magazine.jpg',
   'تحسين وترميم الصور':'./public/assets/service-restoration.jpg',
   'صورة شخصية بخلفية بيضاء':'./public/assets/service-studio-portrait.jpg',
