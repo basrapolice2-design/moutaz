@@ -1,71 +1,196 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Design Market Ai — تصاميم وطباعة حسب الطلب بأسعار واضحة." />
-    <title>Design Market Ai | تصاميمك تبدأ من فكرة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/styles.css" />
-  </head>
-  <body>
-    <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Design Market Ai">
-        <span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>
-        <span><strong>Design Market Ai</strong><small>أفكارك... نصممها لك</small></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c2133" />
+  <meta name="description" content="Personalized printing, school products, portraits, gifts, business cards, posters and custom design services by MOUTAZ GROUP." />
+  <meta property="og:title" content="MOUTAZ GROUP | Custom Design & Print in Iraq" />
+  <meta property="og:description" content="تصميم وطباعة مخصصة للطلاب والمعلمين والأفراد والمشاريع والمدارس والمؤسسات — اطلب مباشرة عبر واتساب." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_IQ" />
+  <meta property="og:url" content="https://moutaz2026.github.io/moutaz/" />
+  <meta property="og:image" content="https://moutaz2026.github.io/moutaz/public/assets/business-print.jpg" />
+  <link rel="canonical" href="https://moutaz2026.github.io/moutaz/" />
+  <title>MOUTAZ GROUP | Custom Design & Print in Iraq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <script>document.documentElement.classList.add('js')</script>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="MOUTAZ GROUP - الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">MG</span>
+        <span class="brand-copy"><strong>MOUTAZ GROUP</strong><small>Design • Print • Create</small></span>
       </a>
-      <nav class="main-nav" aria-label="التنقل الرئيسي">
-        <a class="active" href="#top">الرئيسية</a><a href="#services">الخدمات</a><a href="#work">أعمالنا</a><a href="#about">من نحن</a>
+      <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <a href="#top">الرئيسية</a>
+        <a href="#paths">لمن نصمم؟</a>
+        <a href="#best">الأكثر طلبًا</a>
+        <a href="#packages">الباقات</a>
+        <a href="#services">الخدمات</a>
+        <a href="#how">كيف تطلب</a>
       </nav>
-      <a class="mini-whatsapp" href="https://wa.me/9647706077321" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i> اطلب عبر واتساب</a>
-      <button class="menu-toggle" aria-label="فتح القائمة"><i class="fa-solid fa-bars"></i></button>
-    </header>
+      <a class="header-wa" href="https://wa.me/9647706077321?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20MOUTAZ%20GROUP" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>اطلب عبر واتساب</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </header>
 
-    <main id="top">
-      <section class="hero container reveal">
-        <div class="hero-copy">
-          <span class="eyebrow">نصمّم التفاصيل التي تبقى</span>
-          <h1>كل فكرة جميلة<br><em>تستحق أن تُطبع</em></h1>
-          <p>تصاميم مخصصة بجودة عالية ولمسة إبداعية — للمدرسة، للعائلة، ولعملك.</p>
-          <div class="hero-actions"><a class="btn primary" href="#services">استكشف الخدمات <i class="fa-solid fa-arrow-left"></i></a><a class="text-link" href="https://wa.me/9647706077321" target="_blank" rel="noreferrer">تواصل معنا مباشرة <i class="fa-brands fa-whatsapp"></i></a></div>
-          <div class="trust-row"><span><i class="fa-solid fa-heart"></i> تصاميم مخصصة</span><span><i class="fa-solid fa-shield-heart"></i> جودة مضمونة</span><span><i class="fa-solid fa-bolt"></i> رد سريع</span></div>
+  <main id="main">
+    <section class="hero container section-shell" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal">
+        <p class="kicker">We Turn Ideas Into Custom Designs & Prints</p>
+        <h1 id="heroTitle">فكرتك. <span>تصميمك.</span> طباعتك.</h1>
+        <p class="hero-lead">نحوّل فكرتك أو صورتك إلى تصميم ومنتج مطبوع خاص بك — للمدرسة، للهدية، للمناسبة، للمشروع أو المؤسسة.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#best">استكشف الأكثر طلبًا <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          <a class="btn btn-secondary" href="https://wa.me/9647706077321?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%84%D8%AF%D9%8A%20%D9%81%D9%83%D8%B1%D8%A9%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D9%86%D9%81%D9%8A%D8%B0%D9%87%D8%A7%20%D9%85%D8%B9%20MOUTAZ%20GROUP" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> أرسل فكرتك الآن</a>
         </div>
-        <div class="hero-visual">
-          <div class="hero-photo"><img src="./public/assets/business-print.jpg" alt="نماذج مطبوعات وتصاميم إبداعية" /></div>
-          <div class="floating-note note-one">فكرة صغيرة<br><b>تصنع فرقًا</b> <i class="fa-regular fa-heart"></i></div>
-          <div class="floating-note note-two"><i class="fa-solid fa-wand-magic-sparkles"></i> صمّمها بطريقتك</div>
+        <div class="hero-points" aria-label="مميزات الخدمة">
+          <span><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> تصميم حسب الطلب</span>
+          <span><i class="fa-solid fa-tags" aria-hidden="true"></i> سعر واضح عندما يكون ثابتًا</span>
+          <span><i class="fa-solid fa-message" aria-hidden="true"></i> طلب سريع برسالة جاهزة</span>
         </div>
-      </section>
+      </div>
+      <div class="hero-visual reveal" aria-label="نماذج من خدمات MOUTAZ GROUP">
+        <figure class="hero-main-img"><img src="./public/assets/school-stickers.jpg" alt="نموذج لملصقات مدرسية مخصصة" width="900" height="700" fetchpriority="high" /></figure>
+        <figure class="hero-mini hero-mini-a"><img src="./public/assets/service-restoration.jpg" alt="نموذج لخدمة ترميم الصور" width="420" height="320" /></figure>
+        <figure class="hero-mini hero-mini-b"><img src="./public/assets/service-business-card.jpg" alt="نموذج لكرت شخصي مطبوع" width="420" height="320" /></figure>
+        <div class="hero-stamp"><strong>38</strong><span>خدمة مدرجة<br>في القائمة الحالية</span></div>
+      </div>
+    </section>
 
-      <section class="category-strip container reveal" aria-label="فئات الخدمات">
-        <span class="strip-label">اختر ما يناسبك <i class="fa-regular fa-hand-point-left"></i></span>
-        <button class="category active" data-category="الكل"><i class="fa-solid fa-layer-group"></i><b>كل الخدمات</b><small>خيارات متنوعة</small></button>
-        <button class="category" data-category="مدرسي"><i class="fa-solid fa-book-open"></i><b>مدرسي</b><small>لمسة لكل طالب</small></button>
-        <button class="category" data-category="هدايا"><i class="fa-solid fa-gift"></i><b>هدايا</b><small>لحظات تبقى للأبد</small></button>
-        <button class="category" data-category="صور"><i class="fa-solid fa-image"></i><b>صور ورسومات</b><small>من صورتك إلى لوحة</small></button>
-        <button class="category" data-category="تجاري"><i class="fa-solid fa-briefcase"></i><b>مطبوعات الأعمال</b><small>هوية أكثر احترافية</small></button>
-      </section>
+    <section id="paths" class="container section-block" aria-labelledby="pathsTitle">
+      <div class="section-head reveal">
+        <div><p class="kicker">Choose Your Path</p><h2 id="pathsTitle">ابدأ حسب احتياجك</h2></div>
+        <p>بدل البحث بين عشرات الخدمات، اختر نوع الطلب وسنعرض لك الأنسب مباشرة.</p>
+      </div>
+      <div id="pathGrid" class="path-grid"></div>
+    </section>
 
-      <section id="services" class="services-section container reveal">
-        <div class="section-heading"><div><span class="eyebrow">كل ما تحتاجه في مكان واحد</span><h2>خدماتنا <em>المميزة</em></h2></div><a href="#services" class="outline-btn">عرض كل الخدمات <i class="fa-solid fa-arrow-left"></i></a></div>
-        <div class="toolbar"><label class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="search" type="search" placeholder="ابحث عن خدمة..." /></label><span id="resultCount"></span></div>
-        <div id="serviceGrid" class="service-grid"></div>
-        <div id="emptyState" class="empty" hidden><i class="fa-regular fa-face-smile-beam"></i><h3>لم نعثر على خدمة بهذا الاسم</h3><p>جرّب كلمة أخرى أو اعرض كل الفئات.</p></div>
-      </section>
+    <section id="best" class="best-section section-block">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="kicker">Best Sellers</p><h2>ابدأ من الأكثر طلبًا</h2></div>
+          <p>ثماني خدمات واضحة وسريعة الفهم، مناسبة للطلب المباشر أو كبداية لباقات أكبر.</p>
+        </div>
+        <div id="bestGrid" class="best-grid"></div>
+      </div>
+    </section>
 
-      <section id="work" class="process-band container reveal">
-        <div><span class="eyebrow">رحلة بسيطة لنتيجة أجمل</span><h2>كيف نعمل؟</h2><p>أخبرنا بما تحتاج، ونحن نهتم بالباقي.</p></div>
-        <div class="steps"><div class="step"><b>1</b><i class="fa-brands fa-whatsapp"></i><strong>تواصل معنا</strong><small>عبر واتساب واختر خدمتك</small></div><div class="step"><b>2</b><i class="fa-solid fa-pen-ruler"></i><strong>نصمم لك</strong><small>نراجع التفاصيل معك</small></div><div class="step"><b>3</b><i class="fa-solid fa-box-open"></i><strong>تستلم طلبك</strong><small>بجودة عالية وفي الوقت</small></div></div>
-      </section>
+    <section id="showcase" class="container section-block" aria-labelledby="showcaseTitle">
+      <div class="section-head reveal">
+        <div><p class="kicker">Visual Showcase</p><h2 id="showcaseTitle">النتيجة أولاً</h2></div>
+        <p>نماذج مرئية لخدمات يمكن تحويلها بسهولة إلى فيديوهات قصيرة مرتبطة بزر الطلب.</p>
+      </div>
+      <div id="showcaseGrid" class="showcase-grid"></div>
+    </section>
 
-      <section id="about" class="cta-section container reveal"><div><span class="eyebrow">جاهز لبدء مشروعك؟</span><h2>خلّ فكرتك تأخذ شكلًا جميلًا</h2><p>تواصل معنا عبر واتساب واحصل على استشارة مجانية.</p></div><a class="btn primary large" href="https://wa.me/9647706077321?text=مرحباً، أريد الاستفسار عن خدمات Design Market Ai" target="_blank" rel="noreferrer">اطلب عبر واتساب <i class="fa-brands fa-whatsapp"></i></a></section>
-    </main>
-    <footer class="footer container"><div class="brand"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span><span><strong>Design Market Ai</strong><small>أفكارك... نصممها لك</small></span></div><p>نصنع من الأفكار الجميلة شيئًا يُرى ويُحفظ.</p><div class="socials"><a href="https://www.instagram.com/moutaz_2023" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.linkedin.com/in/moutaz-al-husainat-91463433b/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.facebook.com/moutaz.1984/" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></footer>
-    <div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button><img id="modalImage" src="" alt="" /><div class="modal-body"><span id="modalCategory" class="pill"></span><h2 id="modalTitle"></h2><p id="modalDesc"></p><div class="modal-meta"><strong id="modalPrice"></strong><span id="modalSpec"></span></div><a id="modalWhatsapp" class="btn primary" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i> اطلب هذه الخدمة</a></div></div></div>
-    <script type="module" src="./src/app.js"></script>
-  </body>
+    <section id="packages" class="packages-section section-block" aria-labelledby="packagesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="kicker">Packages</p><h2 id="packagesTitle">باقات تجمع ما تحتاجه</h2></div>
+          <p>الباقات تُسعّر نهائيًا حسب التفاصيل والكمية؛ لا نعرض سعرًا تخمينيًا قبل معرفة الطلب.</p>
+        </div>
+        <div id="packageGrid" class="package-grid"></div>
+      </div>
+    </section>
+
+    <section id="services" class="container section-block" aria-labelledby="servicesTitle">
+      <div class="section-head reveal">
+        <div><p class="kicker">All Services</p><h2 id="servicesTitle">كل الخدمات والأسعار</h2></div>
+        <p>الأسعار والمقاسات والكميات مأخوذة من قائمة الخدمات الحالية. الخدمات المتغيرة تظهر كطلب عرض سعر.</p>
+      </div>
+      <div class="service-toolbar" id="serviceToolbar">
+        <label class="search-box" for="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="search" type="search" autocomplete="off" placeholder="ابحث باسم الخدمة أو الوصف..." /></label>
+        <div id="filterChips" class="filter-chips" aria-label="تصفية الخدمات"></div>
+        <span id="resultCount" class="result-count" aria-live="polite"></span>
+      </div>
+      <div id="serviceGrid" class="service-grid"></div>
+      <div id="emptyState" class="empty-state" hidden><i class="fa-regular fa-face-meh" aria-hidden="true"></i><h3>لا توجد خدمة مطابقة</h3><p>غيّر البحث أو اختر «كل الخدمات».</p></div>
+    </section>
+
+    <section id="how" class="how-section section-block" aria-labelledby="howTitle">
+      <div class="container how-inner">
+        <div class="section-head reveal">
+          <div><p class="kicker">Choose → Message → Approve → Receive</p><h2 id="howTitle">كيف تطلب؟</h2></div>
+          <p>مسار قصير وواضح من اختيار الخدمة حتى الاتفاق على التنفيذ.</p>
+        </div>
+        <div class="steps-grid">
+          <article><span>01</span><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i><h3>اختر</h3><p>اختر الخدمة أو الباقة المناسبة.</p></article>
+          <article><span>02</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><h3>أرسل</h3><p>يفتح واتساب برسالة تحمل اسم الخدمة والسعر الظاهر.</p></article>
+          <article><span>03</span><i class="fa-solid fa-circle-check" aria-hidden="true"></i><h3>اعتمد</h3><p>نراجع المقاس والكمية والصورة أو الفكرة معك.</p></article>
+          <article><span>04</span><i class="fa-solid fa-box-open" aria-hidden="true"></i><h3>استلم</h3><p>بعد الاتفاق تبدأ مرحلة التنفيذ والتسليم.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container trust-section section-block" aria-labelledby="trustTitle">
+      <div class="section-head reveal">
+        <div><p class="kicker">Clear by Design</p><h2 id="trustTitle">لماذا أصبح الطلب أوضح؟</h2></div>
+      </div>
+      <div class="trust-grid">
+        <article><i class="fa-solid fa-user-group" aria-hidden="true"></i><h3>مسارات حسب العميل</h3><p>طلاب، معلمون، صور وهدايا، أعمال ومؤسسات.</p></article>
+        <article><i class="fa-solid fa-receipt" aria-hidden="true"></i><h3>لا أسعار مخفية</h3><p>السعر الثابت يظهر مباشرة، والمتغير يتحول إلى طلب عرض سعر.</p></article>
+        <article><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><h3>رسالة مخصصة</h3><p>اسم الخدمة ومواصفاتها تنتقل تلقائيًا إلى واتساب.</p></article>
+        <article><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><h3>مهيأ للهاتف</h3><p>بطاقات أكبر، لمس أسهل، وواتساب ثابت أثناء التصفح.</p></article>
+      </div>
+    </section>
+
+    <section id="faq" class="container faq-section section-block" aria-labelledby="faqTitle">
+      <div class="section-head reveal"><div><p class="kicker">FAQ</p><h2 id="faqTitle">أسئلة سريعة قبل الطلب</h2></div></div>
+      <div class="faq-list">
+        <details><summary>هل السعر الظاهر نهائي دائمًا؟</summary><p>السعر الظاهر هو السعر المدرج للخدمة بالمقاس والعدد المحددين. الخدمات التي تختلف حسب العمل أو الكمية أو الحجم تظهر بوضوح كطلب عرض سعر.</p></details>
+        <details><summary>كيف أرسل الصورة أو الفكرة؟</summary><p>افتح الخدمة واضغط «اطلب عبر واتساب». ستظهر رسالة جاهزة، ثم يمكنك إرفاق الصورة أو التفاصيل داخل المحادثة.</p></details>
+        <details><summary>هل يمكن طلب أكثر من خدمة معًا؟</summary><p>نعم. استخدم قسم الباقات أو اذكر الخدمات المطلوبة في واتساب ليتم جمعها في طلب واحد.</p></details>
+        <details><summary>هل توجد خدمات للمدارس والمؤسسات؟</summary><p>نعم، وتشمل الشهادات والفايلات والسجلات والمجلات والدروع ولوحات الرؤية والأهداف وغيرها حسب القائمة.</p></details>
+      </div>
+    </section>
+
+    <section class="cta-band section-block" aria-labelledby="ctaTitle">
+      <div class="container cta-inner">
+        <div><p class="kicker">Send Your Idea on WhatsApp</p><h2 id="ctaTitle">أرسل الفكرة، الصورة أو تفاصيل الطلب</h2><p>سنحوّلها إلى خدمة واضحة ونراجع معك المقاس والكمية والسعر قبل التنفيذ.</p></div>
+        <a class="btn btn-primary btn-large" href="https://wa.me/9647706077321?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D9%81%D9%83%D8%B1%D8%AA%D9%8A%20%D8%A3%D9%88%20%D8%B5%D9%88%D8%B1%D8%AA%D9%8A%20%D9%84%D8%AA%D9%86%D9%81%D9%8A%D8%B0%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B9%20MOUTAZ%20GROUP" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> ابدأ الطلب</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">MG</span><span class="brand-copy"><strong>MOUTAZ GROUP</strong><small>Design • Print • Create</small></span></a><p>نحوّل فكرتك أو صورتك إلى تصميم ومنتج مطبوع خاص بك.</p></div>
+      <div><h3>روابط سريعة</h3><a href="#best">الأكثر طلبًا</a><a href="#packages">الباقات</a><a href="#services">كل الخدمات</a><a href="#faq">الأسئلة الشائعة</a></div>
+      <div><h3>تواصل</h3><a href="https://wa.me/9647706077321" target="_blank" rel="noreferrer">WhatsApp: 07706077321</a><a href="https://www.instagram.com/moutaz_2023" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/moutaz.1984/" target="_blank" rel="noreferrer">Facebook</a><a href="https://www.linkedin.com/in/moutaz-al-husainat-91463433b/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+      <div><h3>مواقع مرتبطة</h3><a href="https://moutazlib-rtvnckoz.manus.space/" target="_blank" rel="noreferrer">المكتبة الإلكترونية</a><a href="https://nahrainstori-7ba9b9dp.manus.space" target="_blank" rel="noreferrer">حكايا ضفتي النهرين</a><a href="https://www.noor-book.com/u/moutaz-husanat/books" target="_blank" rel="noreferrer">مكتبة نور</a><a href="https://moutaz2026.github.io/moutaz/" rel="noreferrer">GitHub Pages</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> MOUTAZ GROUP</span><span>Custom Design & Print in Iraq</span></div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/9647706077321?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20MOUTAZ%20GROUP" target="_blank" rel="noreferrer" aria-label="اطلب عبر واتساب"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <button id="backToTop" class="back-top" type="button" aria-label="العودة إلى أعلى الصفحة"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="إغلاق"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <div class="modal-media"><img id="modalImage" src="" alt="" width="800" height="600" /></div>
+      <div class="modal-body">
+        <div class="modal-topline"><span id="modalSegment" class="pill"></span><span id="modalBadge" class="badge"></span></div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <dl class="modal-specs"><div><dt>المقاس</dt><dd id="modalSize"></dd></div><div><dt>العدد</dt><dd id="modalQty"></dd></div></dl>
+        <div class="modal-price-row"><div><small>السعر المدرج</small><strong id="modalPrice"></strong></div><button id="shareService" class="icon-btn" type="button"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>مشاركة</span></button></div>
+        <a id="modalWhatsapp" class="btn btn-primary btn-full" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> اطلب هذه الخدمة</a>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">يحتاج هذا الموقع إلى JavaScript لعرض الخدمات والتصفية.</div></noscript>
+  <script type="module" src="./src/app.js"></script>
+</body>
 </html>
