@@ -24,7 +24,22 @@ const serviceImageOverrides={
   'مطوية ثلاثية':'./public/assets/service-trifold.jpg',
   'دفتر وصولات':'./public/assets/service-receipt.jpg',
   'بروش دبوس بنز':'./public/assets/service-badge.jpg',
-  'بطاقة زفاف':'./public/assets/service-wedding.jpg'
+  'بطاقة زفاف':'./public/assets/service-wedding.jpg',
+  'شهادة التخرج':'./public/assets/service-graduation.jpg',
+  'شهادة درجات':'./public/assets/service-grades.jpg',
+  'بطاقة مخبز':'./public/assets/service-bakery-card.jpg',
+  'طباعة أسماء':'./public/assets/service-name-print.jpg',
+  'كرت شخصي':'./public/assets/service-business-card.jpg',
+  'لوحات مكتبية':'./public/assets/service-office-sign.jpg',
+  'بطاقة التموين':'./public/assets/service-ration-card.jpg',
+  'درع كرستال':'./public/assets/service-crystal-shield.jpg',
+  'مجلة':'./public/assets/service-institution-magazine.jpg',
+  'شهادة تقديرية':'./public/assets/service-appreciation-certificate.jpg',
+  'تصميم لوكو':'./public/assets/service-logo-design.jpg',
+  'الرؤية والأهداف':'./public/assets/service-vision-board.jpg',
+  'تقويم':'./public/assets/service-calendar.jpg',
+  'سجل':'./public/assets/service-register.jpg',
+  'فايل':'./public/assets/service-school-folder.jpg'
 };
 const serviceImage=s=>serviceImageOverrides[s[1]]||imageMap[s[6]];
 const formatPrice = p => typeof p === 'number' ? `${p.toLocaleString('ar-IQ')} د.ع` : p;
