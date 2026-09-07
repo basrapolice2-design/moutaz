@@ -1,0 +1,5 @@
+node_modules/
+generated_images/
+upload/
+prototype-*.png
+public/assets/*.png
